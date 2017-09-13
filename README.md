@@ -1,6 +1,6 @@
 # macfinder
 
-TODO: Put more badges here.
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/jakewarren/macfinder/blob/master/LICENSE)
 
 > Looks up a OUI for a given MAC address.
 
@@ -15,22 +15,20 @@ TODO: Put more badges here.
 ## Install
 
 ```
+go get github.com/jakewarren/macfinder
 ```
 
 ## Usage
 
 ```
+$ macfinder C0:EE:FB:14:13:FF
+C0:EE:FB:14:13:FF => OneplusT	OnePlus Tech (Shenzhen) Ltd
 ```
 
 ## Maintainers
 
 [@jakewarren](https://github.com/jakewarren)
 
-## Contribute
-
-PRs accepted.
-
-Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
