@@ -16,14 +16,17 @@ import (
 	"github.com/jakewarren/go-ouitools"
 )
 
-var db *ouidb.OuiDb
 var (
+    db *ouidb.OuiDb
+
+    version string
+
 	app = kingpin.New("macfinder", "Look-up the manufacturer for a MAC address")
 	mac = app.Arg("mac", "the MAC address to lookup.").Required().String()
 )
 
 func main() {
-	app.Version("0.1").VersionFlag.Short('V')
+	app.Version(version).VersionFlag.Short('V')
 	app.HelpFlag.Short('h')
 	app.UsageTemplate(kingpin.SeparateOptionalFlagsUsageTemplate)
 	kingpin.MustParse(app.Parse(os.Args[1:]))
