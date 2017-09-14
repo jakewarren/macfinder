@@ -1,7 +1,5 @@
 BINARY := macfinder
 
-LDFLAGS = -ldflags "-w -s"
-
 VERSION := $(shell git describe --tags --abbrev=0 2>/dev/null || (git describe --always --long --dirty|tr '\n' '-';date +%Y.%m.%d))
 LDFLAGS = -ldflags "-w -s -X main.version=${VERSION}"
 LDFLAGS_DEV = -ldflags "-X main.version=${VERSION}"
